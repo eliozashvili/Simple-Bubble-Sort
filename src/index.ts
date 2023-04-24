@@ -1,19 +1,15 @@
-class Sorter {
-  constructor(public collection: number[]) {}
+import { Sorter } from "./Sorter";
+// import { NumbersCollection } from "./NumbersCollection";
+import { CharactersCollection } from "./CharactersCollection";
 
-  sort(): void {
-    const { length } = this.collection;
-    for (let i = 0; i < length; i++) {
-      for (let j = 0; j < length - i - 1; j++) {
-        if (this.collection[j] > this.collection[j + 1]) {
-          const temp = this.collection[j];
-          this.collection[j] = this.collection[j + 1];
-          this.collection[j + 1] = temp;
-        }
-      }
-    }
-  }
-}
-const sorter = new Sorter([10, 5, -3, 0, 12, 2]);
+// const numbersCollection = new NumbersCollection([
+//   10, 20, 2, -4, -98, 0, 22, 4, 15,
+// ]);
+// const sorter = new Sorter(numbersCollection);
+// sorter.sort();
+// console.log(numbersCollection.data);
+
+const charactersCollestion = new CharactersCollection("Giorgi Eliozashvili");
+const sorter = new Sorter(charactersCollestion);
 sorter.sort();
-console.log(sorter.collection);
+console.log(charactersCollestion.data);

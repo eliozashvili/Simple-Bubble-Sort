@@ -1,21 +1,15 @@
 "use strict";
-class Sorter {
-    constructor(collection) {
-        this.collection = collection;
-    }
-    sort() {
-        const { length } = this.collection;
-        for (let i = 0; i < length; i++) {
-            for (let j = 0; j < length - i - 1; j++) {
-                if (this.collection[j] > this.collection[j + 1]) {
-                    const temp = this.collection[j];
-                    this.collection[j] = this.collection[j + 1];
-                    this.collection[j + 1] = temp;
-                }
-            }
-        }
-    }
-}
-const sorter = new Sorter([10, 5, -3, 0, 12, 2]);
+Object.defineProperty(exports, "__esModule", { value: true });
+const Sorter_1 = require("./Sorter");
+// import { NumbersCollection } from "./NumbersCollection";
+const CharactersCollection_1 = require("./CharactersCollection");
+// const numbersCollection = new NumbersCollection([
+//   10, 20, 2, -4, -98, 0, 22, 4, 15,
+// ]);
+// const sorter = new Sorter(numbersCollection);
+// sorter.sort();
+// console.log(numbersCollection.data);
+const charactersCollestion = new CharactersCollection_1.CharactersCollection("Giorgi Eliozashvili");
+const sorter = new Sorter_1.Sorter(charactersCollestion);
 sorter.sort();
-console.log(sorter.collection);
+console.log(charactersCollestion.data);
