@@ -1,6 +1,5 @@
 export class NumbersCollection {
   constructor(public data: number[]) {}
-
   // when using get you can you length method like this
   // smth.length instead of smth.length()
   get length(): number {
